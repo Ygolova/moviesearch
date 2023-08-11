@@ -54,7 +54,7 @@ inputElement.addEventListener('click', () => {
 button.addEventListener('click', (event) => {
   const inputValue = inputElement.value;
   getData(
-    `http://www.omdbapi.com/?apikey=18b8609f&s=${
+    `https://www.omdbapi.com/?apikey=18b8609f&s=${
       inputValue === 'Поиск фильмов и сериалов' || inputValue === ''
         ? 'Spider Man'
         : inputValue
