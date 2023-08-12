@@ -9,6 +9,46 @@ body {
   background-color: #02050e;
 }
 
+.sorting-container {
+  box-shadow: 0px 0px 20px 5px #141619;
+  left: 530px;
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background-color: #222d33;
+  display: none;
+  align-items: center;
+  justify-items: center;
+}
+
+.slide {
+  transition: left 0.4s ease-in-out;
+}
+
+.active {
+  display: block;
+}
+
+#sortDescending,
+#sortAscending,
+#sortDescendingAlphabet,
+#sortAscendingAlphabet,
+#sort {
+  cursor: pointer;
+  font-family: "Roboto Slab";
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6156862745);
+}
+
+#sortDescending:hover,
+#sortAscending:hover,
+#sortDescendingAlphabet:hover,
+#sortAscendingAlphabet:hover,
+#sort:hover {
+  color: #ffffff;
+}
+
 .container {
   display: grid;
   min-height: 100vh;
@@ -21,22 +61,29 @@ body {
   align-items: center;
   display: grid;
   gap: 20px;
-  grid-template-areas: "a a";
+  grid-template-areas: "a a a a a";
   justify-content: center;
   background-color: #222d33;
 }
+.container-searching__sort {
+  position: relative;
+  transition: left 0.4s ease-in-out;
+}
 .container-searching__search {
-  width: 285px;
+  padding-left: 3px;
+  width: calc(100% + 27px);
   height: 30px;
   background-color: rgba(0, 0, 0, 0);
   font-weight: 300;
   border: 1px solid rgba(255, 255, 255, 0.329);
   border-radius: 3px;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.3s;
 }
 .container-searching__but {
   display: grid;
-  width: 55px;
+  width: calc(100% + 27px);
+  position: relative;
+  left: 17px;
   height: 30px;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.329);
@@ -44,9 +91,10 @@ body {
   transition: background-color 0.25s;
   justify-items: center;
   align-items: center;
+  transition: left 0.3s;
 }
 .container-searching__but:hover, .container-searching__search:hover {
-  border: 2px solid rgba(255, 255, 255, 0.644);
+  border: 1px solid rgba(255, 255, 255, 0.644);
 }
 .container-searching__but:hover {
   background-color: #02050e;
@@ -58,6 +106,7 @@ body {
   margin-top: 10px;
   gap: 70px;
   box-shadow: 7px 7px 19px black;
+  text-align: center;
 }
 
 .title {

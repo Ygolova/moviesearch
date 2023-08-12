@@ -16,9 +16,20 @@
 </head>
 
 <body>
+
   <div class="container" id="container">
     <div class="container-searching">
-      <input id="search" class="container-searching__search" type="text" value="Поиск фильмов и сериалов">
+      <a id="sort" class="container-searching__sort">Фильтры
+      </a>
+      <div id="backgroundSort" class="sorting-container">
+        <a id="sortDescending" class="container-searching__sort-inner">Сортировка по дате ↓</a>
+        <a id="sortAscending" class="container-searching__sort-inner">Сортировка по дате ↑</a>
+        <a id="sortDescendingAlphabet" class="container-searching__sort-inner">Сортировка A-B ↓</a>
+        <a id="sortAscendingAlphabet" class="container-searching__sort-inner">Сортировка B-A ↑</a>
+      </div>
+      <div class="obr">
+        <input id="search" class="container-searching__search" type="text" value="Поиск фильмов и сериалов">
+      </div>
       <i class="fa fa-search container-searching__but but" aria-hidden="true" id="but"></i>
     </div>
     <div class="container-grid" id="grid"></div>
@@ -36,6 +47,8 @@
     </footer>
   </div>
 </body>
+
+<script src="libs/jquery/dist/jquery-3.7.0.min.js"></script>
 <script src="assets/js/main.js"></script>
 
 </html>
