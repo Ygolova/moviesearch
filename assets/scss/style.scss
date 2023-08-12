@@ -43,7 +43,6 @@ body {
   color: #ffffff9d;
 }
 
-
 #sortDescending:hover,
 #sortAscending:hover,
 #sortDescendingAlphabet:hover,
@@ -51,7 +50,6 @@ body {
 #sort:hover {
   color: #ffffff;
 }
-
 
 .container {
   display: grid;
@@ -62,12 +60,14 @@ body {
   &-searching {
     width: 100%;
     height: 50px;
+    position: relative;
     align-items: center;
     display: grid;
     gap: 20px;
     grid-template-areas: 'a a a a a';
     justify-content: center;
     background-color: #222d33;
+    padding-top: 10px;
     &__sort {
       position: relative;
       transition: left 0.4s ease-in-out;

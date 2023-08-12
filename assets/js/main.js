@@ -120,7 +120,7 @@ sort.addEventListener('click', () => {
 
 function checkPosition() {
   if (
-    backgroundSort.style.left == '330px' &&
+    backgroundSort.style.left == '315px' &&
     verification == false &&
     backgroundSort.style.top === '0px'
   ) {
@@ -262,13 +262,13 @@ sortAscendingAlphabet.addEventListener('click', () => {
 
 function setTargetPosition() {
   if (sort.classList.contains('active')) {
-    targetPosition = 330;
+    targetPosition = 315;
   } else if (backgroundSort.style.top === '50px') {
     targetPosition = 530;
   }
 }
 function updateTargetPositionTop() {
-  if (targetPosition === 330 && verification === true) {
+  if (targetPosition === 315 && verification === true) {
     targetPositionTop = 0;
     verification = false;
   } else {
